@@ -1,0 +1,13 @@
+{
+  "name": "backend-test",
+  "version": "1.0.0",
+  "description": "Your job is to write a command-line interface in your choice langage.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+
+}
