@@ -1,4 +1,4 @@
-import data from './data.js';
+import data from '../data.js';
 import count from './functions/count.js';
 import parseInput from './functions/parseInput.js';
 import filter from './functions/filter.js';
