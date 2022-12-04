@@ -9,6 +9,15 @@ class People {
         animals: this.animals
     }, this.animals.length];
   }
+
+  filter(value) {
+    let result = [];
+    this.animals.forEach(function (animal) {
+      if (animal.name.includes(value)) {
+        result.push(animal);
+      }});
+    return result;
+  }
 }
 
 export default People;
