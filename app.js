@@ -1,5 +1,5 @@
 import data from './data.js';
-
+import count from './functions/count.js';
 
 function parseInput(string){
     let input = string.split("=")[1];
@@ -20,25 +20,7 @@ function filter(filter){
      return result;
 }
 
-function count(d) {
-    let result = [];
-    let total = 0;
-    let peopleCount = 0;
-    let people = [];
-    let animalsCount = 0;
-        for(let j = 0; j < d.people.length; j++){
-            peopleCount++;            
-            animalsCount = 0;
-            for (let k = 0; k < d.people[j].animals.length; k++){
-                animalsCount++;
-            }
-            total += animalsCount;
-            people.push({"name":d.people[j].name + ` [${animalsCount}]`, "animals":d.people[j].animals});
-        }
-    total += peopleCount;
-    result = {"name": d.name + ` [${total}]`,"people": people};
-    return result;
-}
+
 
 const args = process.argv.slice(2)[0];
 if (args.includes("--filter")) {
@@ -46,10 +28,5 @@ if (args.includes("--filter")) {
     let result = filter(input);
     console.log(JSON.stringify(result, null, 2));
 } else if (args === "--count") {
-    let result = [];
-    for (let i = 0; i < data.length; i++) {
-        result.push(count(data[i]));
-    }
-    console.log(JSON.stringify(result, null, 2));
-
+    console.log(JSON.stringify(count(data), null, 2));
 }
