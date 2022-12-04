@@ -7,7 +7,8 @@ function filter(value, data) {
                 name: country.name,
                 people: filtered,
             });
-        } });
+        }
+    });
     return result;
 }
 

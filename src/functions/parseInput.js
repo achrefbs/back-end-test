@@ -1,4 +1,4 @@
-function parseInput(string){
+function parseInput(string) {
     let input = string.split("=")[1];
     return input;
 }
