@@ -1,9 +1,6 @@
-import convertData from "./convert.js";
-
 function filter(value, data) {
-    let convertedData = convertData(data);
     let result = [];
-    convertedData.forEach(function (country) {
+    data.forEach(function (country) {
         let filtered = country.filter(value);
         if (filtered.length > 0) {
             result.push({
